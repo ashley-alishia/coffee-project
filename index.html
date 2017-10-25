@@ -4,20 +4,14 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
     <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <hr>
 
+<div class="col-md-6">
     <table>
         <thead>
             <tr>
@@ -28,6 +22,61 @@
         </thead>
         <tbody id="coffees"></tbody>
     </table>
+</div>
+
+    <section>
+        <div class="col-md-6">
+            <ul class="list-group">
+                <h5>Roast</h5><select class="form-control" name="roast">
+                <li>
+                    <option value="all">All</option>
+                    <option value="light">Light</option>
+                    <option value="normal">Normal</option>
+                    <option value="dark">Dark</option>
+                </select></li>
+
+
+                <h5>Coffee Name</h5>
+                <input type="text" class="form-control">
+                <br>
+               <div><button type="button" class="btn btn-primary btn-block">Submit</button></div>
+
+            </ul>
+            <hr>
+
+            <h3>Add a Coffee</h3>
+
+
+    <ul class="list-group">
+        <h5>Roast</h5><select class="form-control" name="roast">
+        <li>
+            <option value="all">All</option>
+            <option value="light">Light</option>
+            <option value="normal">Normal</option>
+            <option value="dark">Dark</option>
+        </select></li>
+
+        <h5>Name</h5>
+        <input type="text" class="form-control">
+        <br>
+        <div><button type="button" class="btn btn-primary btn-block">Submit</button></div>
+
+    </ul>
+
+
+    <form>
+        <label for="roast-selection"></label>
+        <select id="roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+        </select>
+        <input id="submit" type="submit" />
+    </form>
+</div>
+
+
+</section>
 
     <script src="main.js"></script>
 </body>
