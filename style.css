@@ -8,6 +8,18 @@ body {
     max-width: 75em;
 }
 
+.name {
+    margin-right: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.roast {
+    font-size: 15px;
+    color: lightgrey;
+    font-weight: normal;
+}
+
 
 table {
     border-collapse: collapse;
