@@ -1,18 +1,18 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+
+    // html += '<div>' + coffee.id + '</div>';
+    html += '<div class="name">' + coffee.name + '<span class="roast">' + coffee.roast + '</span></div>';
+    html += '</div>';
 
     return html;
 }
 
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i <= coffees.length - 1; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
@@ -48,10 +48,17 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'}
 ];
 
+
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 
+var addSubmitButton = document.querySelector('#add-submit');
+var addRoastSelection = document.querySelector('#add-roast-selection');
+
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+addSubmitButton.addEventListener('click', updateCoffees);
+

@@ -3,80 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Coffee!</h1>
 
     <hr>
 
-<div class="col-md-6">
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
-</div>
+<div class="col-md-6" id="coffees"></div>
 
     <section>
         <div class="col-md-6">
-            <ul class="list-group">
-                <h5>Roast</h5><select class="form-control" name="roast">
-                <li>
-                    <option value="all">All</option>
-                    <option value="light">Light</option>
-                    <option value="normal">Normal</option>
-                    <option value="dark">Dark</option>
-                </select></li>
-
-
+            <form>
+                <label for="roast-selection"></label>
+                <h5>Roast</h5>
+                <select class="form-control" id="roast-selection" name="roast">
+                    <option>All</option>
+                    <option>Light</option>
+                    <option>Medium</option>
+                    <option>Dark</option>
+                </select>
                 <h5>Coffee Name</h5>
                 <input type="text" class="form-control">
                 <br>
-               <div><button type="button" class="btn btn-primary btn-block">Submit</button></div>
-
-            </ul>
+                <input id="submit" type="submit" class="btn btn-primary btn-block"/>
+            </form>
             <hr>
 
             <h3>Add a Coffee</h3>
 
 
-    <ul class="list-group">
-        <h5>Roast</h5><select class="form-control" name="roast">
-        <li>
-            <option value="all">All</option>
-            <option value="light">Light</option>
-            <option value="normal">Normal</option>
-            <option value="dark">Dark</option>
-        </select></li>
+            <form>
+                <label for="roast-selection"></label>
+                    <h5>Roast</h5>
+                        <select class="form-control" id="add-roast-selection" name="roast">
+                            <option>All</option>
+                            <option>Light</option>
+                            <option>Medium</option>
+                            <option>Dark</option>
+                        </select>
+                    <h5>Name</h5>
+                    <input type="text" class="form-control">
+                    <br>
+                <input id="add-submit" type="submit" class="btn btn-primary btn-block"/>
+            </form>
 
-        <h5>Name</h5>
-        <input type="text" class="form-control">
-        <br>
-        <div><button type="button" class="btn btn-primary btn-block">Submit</button></div>
-
-    </ul>
-
-
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-</div>
+        </div>
 
 
-</section>
+    </section>
 
     <script src="main.js"></script>
 </body>
